@@ -1,0 +1,67 @@
+body {
+    background-color: rgb(25, 27, 28);
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+header {
+    min-height: 3em;
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    min-height: 3em;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 1em;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #3f3f3f;
+  }
+
+  .title {
+    text-decoration:none;
+    font-size: 1.5em;
+    color: white;
+  }
+
+  .info {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-around;
+  }
+  .info img {
+    width: 100%;
+  }
+
+  .portrait {
+    width: 40%;
+  }
+
+  .portrait img {
+    border-radius: 5%;
+
+  }
+
+  .info-text {
+    width: 50%;
+    margin-left: 2em;
+  }
+
+  hr {
+    width: 100%;
+  }
