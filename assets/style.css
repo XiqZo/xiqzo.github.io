@@ -13,6 +13,9 @@ main {
     max-width: 90em;
     flex-grow: 1;
     align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 footer {
@@ -74,7 +77,7 @@ hr {
 .timeline {
     position: relative;
     max-width: 80em;
-    margin: 0 auto;
+    margin: 0;
     overflow: scroll;
 }
 
