@@ -56,6 +56,17 @@ tr:nth-child(even) {
     max-width: 30em;
 }
 
+.photo-gallery {
+    display: grid;
+    width: 100%;
+    max-width: 30em;
+}
+
+.photo-gallery img {
+    width: 100%;
+    max-width: 30em;
+}
+
 .portrait {
     width: 40%;
 }
