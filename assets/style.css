@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(25, 27, 28);
+    background-color: rgb(12, 34, 46);
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -36,7 +36,7 @@ th {
 }
 
 tr:nth-child(even) {
-    background-color: #3f3f3f;
+    background-color: #2e3f46;
 }
 
 .title {
@@ -86,7 +86,7 @@ hr {
     content: '';
     position: absolute;
     width: 6px;
-    background-color: grey;
+    background-color: #2e3f46;
     top: 0;
     bottom: 0;
     left: 50%;
@@ -108,7 +108,7 @@ hr {
     width: 1.5em;
     height: 1.5em;
     right: -2.1em;
-    border: 4px solid #FF9F55;
+    border: 4px solid #55c1ff;
     top: 1.2em;
     border-radius: 50%;
     z-index: 1;
@@ -161,8 +161,9 @@ hr {
 /* The actual content */
 .content {
     padding: 20px 30px;
-    background-color: #333;
     position: relative;
+    background-color: #193541;
+    border-color: #2e3f46;
     border-radius: 6px;
 }
 
