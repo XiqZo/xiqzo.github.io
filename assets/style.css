@@ -80,6 +80,17 @@ tr:nth-child(even) {
     display: block;
 }
 
+.project-list {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 10em;
+  row-gap: 5em; 
+}
+
+.project a img {
+    width: 35em;
+}
+
 .portrait {
     width: 40%;
 }
