@@ -67,6 +67,19 @@ tr:nth-child(even) {
     max-width: 30em;
 }
 
+.photo-countries {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 10em;
+  row-gap: 5em;
+}
+
+
+.photo-countries a {
+    max-width: 5em;
+    display: block;
+}
+
 .portrait {
     width: 40%;
 }
