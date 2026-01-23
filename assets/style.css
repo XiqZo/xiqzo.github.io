@@ -75,7 +75,7 @@ tr:nth-child(even) {
 }
 
 
-.photo-countries a {
+.photo-countries a img {
     max-width: 5em;
     display: block;
 }
