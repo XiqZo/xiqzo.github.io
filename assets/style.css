@@ -59,14 +59,28 @@ tr:nth-child(even) {
 .photo-gallery {
     display: grid;
     width: 100%;
-    max-width: 30em;
+    grid-template-columns: repeat(auto-fill, minmax(14em, 1fr));
+    gap: 1em;
+}
+
+.photo-gallery a {
+    display: block;
+    overflow: hidden;
+    border-radius: 6px;
 }
 
 .photo-gallery img {
     width: 100%;
-    max-width: 30em;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    content-visibility: auto;
+    transition: transform 0.25s ease;
 }
 
+.photo-gallery a:hover img {
+    transform: scale(1.05);
+}
 .photo-countries {
   display: grid;
   grid-template-columns: auto auto auto;
