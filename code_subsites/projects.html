@@ -1,59 +1,250 @@
+
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="/assets/style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
-    <body>
-        <header>
-            <div class="link-wrapper">
-                <a class="title" href="/">
-                    <span>Waleed Shah</span>
-                </a>
-                |
-                <a class="photos" href="/photos.html">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0c222e">
+
+    <meta name="description"
+          content="Selected software development projects by Waleed Shah.">
+
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Projects | Waleed H. Shah</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="link-wrapper">
+
+            <a class="title" href="/">
+                Waleed H. Shah
+            </a>
+
+            <nav>
+                <a class="photos"
+                   href="/photos.html"
+                   aria-label="Photography"
+                   title="Photography">
                     <i class="fa fa-camera"></i>
                 </a>
-                |
-                <a class="photos" href="/codeprojects.html">
+
+                <a class="photos"
+                   href="/codeprojects.html"
+                   aria-label="Projects"
+                   title="Projects">
                     <i class="fa fa-code"></i>
                 </a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main class="projects-page">
+
+        <!-- Page introduction -->
+
+        <section class="projects-intro">
+
+            <span class="eyebrow">SELECTED WORK</span>
+
+            <h1>Things I've built<span>.</span></h1>
+
+            <p>
+                A collection of personal projects and software
+                I've worked on. Exploring ideas, solving problems
+                and occasionally building something just for fun.
+            </p>
+
+            <div class="projects-count">
+                <span class="projects-count-line"></span>
+                <span>02 PROJECTS</span>
             </div>
-        </header>
-        <hr>
-        <main>
-          <div class="projects-grid">
-              <div class="project-card">
-                  <a href="https://anidle.xiqzo.dk">
-                      <img src="/icons/anidle.png" alt="Anidle project screenshot">
-                  </a>
-                  <div class="project-info">
-                      <h3>Anime Guessing Game</h3>
-                      <p><strong>Tech:</strong> Angular, TypeScript, Node.js</p>
-                      <p><strong>Role:</strong> Full-stack development, game logic, API integration</p>
-                  </div>
-              </div>
-          
-              <div class="project-card">
-                  <a href="https://cgm4all.eu">
-                      <img src="/icons/cgm4all.png" alt="CGM4ALL project screenshot">
-                  </a>
-                  <div class="project-info">
-                      <h3>cgm4all.eu</h3>
-                      <p><strong>Tech:</strong> Lovable, Typescript, Supabase</p>
-                      <p><strong>Role:</strong> Full-stack development</p>
-                  </div>
-              </div>
-          </div>
-        </main>
-        <hr>
-        <footer>
-            <div class="link-wrapper">
-                <a class="github-link" href="https://github.com/XiqZo/">
-                    <span>Github</span>
+
+        </section>
+
+
+        <!-- Project collection -->
+
+        <section class="work-grid">
+
+
+            <!-- Anidle -->
+
+            <article class="work-card">
+
+                <a class="work-image"
+                   href="https://anidle.xiqzo.dk"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    <img src="/icons/anidle.png"
+                         alt="Anidle project preview">
+
+                    <span class="work-image-overlay">
+                        <span>VIEW PROJECT</span>
+                        <i class="fa fa-arrow-up-right"></i>
+                    </span>
+
                 </a>
-            </div>
-        </footer>
-    </body>
+
+
+                <div class="work-content">
+
+                    <div class="work-meta">
+                        <span>01 / PERSONAL PROJECT</span>
+                        <span class="work-status">
+                            <span></span>
+                            LIVE
+                        </span>
+                    </div>
+
+
+                    <h2>Anime Guessing Game</h2>
+
+                    <p class="work-description">
+                        An anime guessing game built around
+                        game logic and API integration.
+                        A full-stack project combining
+                        frontend and backend development.
+                    </p>
+
+
+                    <div class="work-details">
+
+                        <div class="work-detail">
+                            <span>ROLE</span>
+                            <p>Full-stack development</p>
+                        </div>
+
+                        <div class="work-detail">
+                            <span>TECHNOLOGY</span>
+
+                            <div class="tech-tags">
+                                <span>Angular</span>
+                                <span>TypeScript</span>
+                                <span>Node.js</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <a class="work-link"
+                       href="https://anidle.xiqzo.dk"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        Explore project
+                        <i class="fa fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- CGM4ALL -->
+
+            <article class="work-card">
+
+                <a class="work-image"
+                   href="https://cgm4all.eu"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    <img src="/icons/cgm4all.png"
+                         alt="CGM4ALL project preview">
+
+                    <span class="work-image-overlay">
+                        <span>VIEW PROJECT</span>
+                        <i class="fa fa-arrow-up-right"></i>
+                    </span>
+
+                </a>
+
+
+                <div class="work-content">
+
+                    <div class="work-meta">
+                        <span>02 / WEB PROJECT</span>
+                        <span class="work-status">
+                            <span></span>
+                            LIVE
+                        </span>
+                    </div>
+
+
+                    <h2>CGM4ALL</h2>
+
+                    <p class="work-description">
+                        A full-stack web project developed
+                        using a modern TypeScript-based stack,
+                        with Supabase providing the backend.
+                    </p>
+
+
+                    <div class="work-details">
+
+                        <div class="work-detail">
+                            <span>ROLE</span>
+                            <p>Full-stack development</p>
+                        </div>
+
+                        <div class="work-detail">
+                            <span>TECHNOLOGY</span>
+
+                            <div class="tech-tags">
+                                <span>Lovable</span>
+                                <span>TypeScript</span>
+                                <span>Supabase</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <a class="work-link"
+                       href="https://cgm4all.eu"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        Explore project
+                        <i class="fa fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div class="link-wrapper">
+
+            <span>© Waleed H. Shah</span>
+
+            <a class="github-link"
+               href="https://github.com/XiqZo/">
+
+                <i class="fa fa-github"></i>
+                <span>GitHub</span>
+
+            </a>
+
+        </div>
+    </footer>
+
+</body>
 </html>
