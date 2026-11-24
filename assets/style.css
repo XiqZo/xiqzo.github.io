@@ -1,4 +1,3 @@
-
 /* ========================================
    Global styles
 ======================================== */
@@ -31,17 +30,16 @@ html {
 body {
     margin: 0;
     padding: 0;
+    min-height: 100vh;
 
-    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+
+    background: var(--background);
     color: var(--text);
 
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
                  Roboto, Helvetica, Arial, sans-serif;
-
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-
     line-height: 1.6;
 }
 
@@ -60,18 +58,18 @@ a {
 ======================================== */
 
 header {
-    min-height: 4.5em;
-    border-bottom: 1px solid var(--border);
+    min-height: 4.5rem;
+    padding: 0 2rem;
 
     display: flex;
     align-items: center;
 
-    padding: 0 2rem;
+    border-bottom: 1px solid var(--border);
 }
 
 .link-wrapper {
     width: 100%;
-    max-width: 90em;
+    max-width: 90rem;
     margin: 0 auto;
 
     display: flex;
@@ -79,16 +77,13 @@ header {
     justify-content: space-between;
 }
 
-header .link-wrapper {
-    justify-content: space-between;
-}
-
 .title {
-    text-decoration: none;
+    color: var(--text);
     font-size: 1.3rem;
     font-weight: 700;
     letter-spacing: -0.04em;
-    color: var(--text);
+    text-decoration: none;
+    transition: color var(--transition);
 }
 
 .title:hover {
@@ -110,15 +105,18 @@ nav {
     justify-content: center;
 
     color: var(--text-secondary);
+    font-size: 1.1rem;
     text-decoration: none;
 
+    border: 1px solid transparent;
     border-radius: 8px;
     transition: var(--transition);
 }
 
 .photos:hover {
     color: var(--accent);
-    background-color: var(--accent-soft);
+    background: var(--accent-soft);
+    border-color: var(--border);
 }
 
 
@@ -128,18 +126,16 @@ nav {
 
 main {
     width: 100%;
-    max-width: 90em;
-
+    max-width: 90rem;
+    min-width: 0;
     flex-grow: 1;
     align-self: center;
 
-    padding: 3rem 2rem 5rem;
+    padding: 3.5rem 2rem 5rem;
 
     display: flex;
     flex-direction: column;
-    gap: 6rem;
-
-    min-width: 0;
+    gap: 5.5rem;
 }
 
 .eyebrow {
@@ -163,8 +159,7 @@ main {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-
-    gap: 5rem;
+    gap: clamp(2.5rem, 6vw, 5rem);
 }
 
 .portrait {
@@ -179,9 +174,8 @@ main {
     aspect-ratio: 4 / 5;
     object-fit: cover;
 
-    border-radius: 16px;
     border: 1px solid var(--border);
-
+    border-radius: 16px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
@@ -191,18 +185,20 @@ main {
 }
 
 .info-text h1 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    line-height: 1.1;
-    letter-spacing: -0.06em;
-
     margin: 0.5rem 0 1rem;
+
+    font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+    line-height: 1.04;
+    letter-spacing: -0.065em;
 }
 
 .intro {
+    max-width: 38rem;
+    margin: 0 0 2rem;
+
     color: var(--text-secondary);
     font-size: 1.1rem;
-    max-width: 38rem;
-    margin-bottom: 2rem;
+    line-height: 1.75;
 }
 
 .details {
@@ -211,38 +207,49 @@ main {
 
 .detail {
     display: flex;
-    gap: 1.2rem;
     align-items: flex-start;
+    gap: 1.2rem;
 
     padding: 1.3rem;
 
-    background: var(--surface);
+    background: linear-gradient(
+        135deg,
+        rgba(20, 46, 58, 0.95),
+        rgba(20, 46, 58, 0.55)
+    );
     border: 1px solid var(--border);
     border-radius: var(--radius);
 }
 
 .detail > i {
-    font-size: 1.4rem;
-    color: var(--accent);
+    flex-shrink: 0;
     margin-top: 0.3rem;
+
+    color: var(--accent);
+    font-size: 1.5rem;
 }
 
 .detail-label {
     display: block;
-    color: var(--text-muted);
-    font-size: 0.8rem;
     margin-bottom: 0.2rem;
+
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
 
 .detail strong {
     display: block;
-    font-size: 1rem;
+    font-size: 1.05rem;
 }
 
 .education-description {
-    color: var(--text-secondary);
-    font-size: 0.85rem;
     margin: 0.4rem 0 0;
+    color: var(--text-secondary);
+    font-size: 0.88rem;
+    line-height: 1.55;
 }
 
 .github-button {
@@ -277,71 +284,81 @@ main {
 }
 
 .section-heading {
-    text-align: center;
     margin-bottom: 3rem;
+    text-align: center;
 }
 
 .section-heading h2 {
-    font-size: 2rem;
-    letter-spacing: -0.04em;
     margin: 0.5rem 0;
+
+    font-size: clamp(2rem, 4vw, 2.7rem);
+    letter-spacing: -0.055em;
 }
 
 .section-heading p {
-    color: var(--text-secondary);
     margin: 0;
+    color: var(--text-secondary);
 }
 
 
 /* ========================================
-   Timeline
+   Alternating timeline
 ======================================== */
 
 .timeline {
     position: relative;
-    max-width: 65em;
+    max-width: 68rem;
     margin: 0 auto;
-    padding: 1rem 0;
-    overflow: visible;
+    padding: 0.5rem 0 1rem;
 }
 
+/* The central line */
 .timeline::after {
-    content: '';
-
+    content: "";
     position: absolute;
-    width: 3px;
-
-    background: var(--border);
+    z-index: 0;
 
     top: 0;
     bottom: 0;
     left: 50%;
+    width: 2px;
 
-    margin-left: -1.5px;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        var(--accent) 8%,
+        var(--border) 92%,
+        transparent
+    );
+
+    transform: translateX(-50%);
 }
 
+/* Each timeline entry */
 .container {
-    padding: 1rem 3rem;
     position: relative;
     width: 50%;
+    padding: 0 3rem 2rem;
     background: transparent;
 }
 
+/* Timeline marker */
 .container::after {
-    content: '';
-
+    content: "";
     position: absolute;
-    width: 1rem;
-    height: 1rem;
+    z-index: 2;
+
+    top: 2rem;
+    right: -0.65rem;
+
+    width: 1.1rem;
+    height: 1.1rem;
 
     background: var(--background);
     border: 3px solid var(--accent);
     border-radius: 50%;
 
-    top: 2rem;
-    right: -0.7rem;
-
-    z-index: 1;
+    box-shadow: 0 0 0 5px rgba(85, 193, 255, 0.08);
 }
 
 .left {
@@ -352,12 +369,17 @@ main {
     left: 50%;
 }
 
+.right::after {
+    right: auto;
+    left: -0.65rem;
+}
+
+/* Small pointers from cards towards the timeline */
 .left::before,
 .right::before {
-    content: '';
-
+    content: "";
     position: absolute;
-    top: 2.1rem;
+    top: 2.15rem;
 
     width: 0;
     height: 0;
@@ -366,51 +388,61 @@ main {
 }
 
 .left::before {
-    right: 1.5rem;
+    right: 2rem;
     border-left-color: var(--surface);
 }
 
 .right::before {
-    left: 1.5rem;
+    left: 2rem;
     border-right-color: var(--surface);
 }
 
-.right::after {
-    left: -0.7rem;
-}
-
+/* Timeline cards */
 .content {
-    padding: 1.5rem 1.8rem;
+    position: relative;
+    min-height: 7rem;
+    padding: 1.35rem 1.6rem;
 
-    background: var(--surface);
-    border: 1px solid var(--border);
+    background: linear-gradient(
+        135deg,
+        rgba(20, 46, 58, 0.98),
+        rgba(20, 46, 58, 0.82)
+    );
+    border: 1px solid rgba(85, 193, 255, 0.28);
     border-radius: var(--radius);
 
-    transition: var(--transition);
+    transition:
+        transform var(--transition),
+        background var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
 }
 
 .content:hover {
+    transform: translateY(-3px);
     background: var(--surface-hover);
     border-color: var(--accent);
-    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
 }
 
 .timeline-year {
     color: var(--accent);
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     font-weight: 700;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.09em;
 }
 
 .content h3 {
-    font-size: 1.15rem;
     margin: 0.4rem 0;
+    font-size: 1.15rem;
+    line-height: 1.3;
 }
 
 .content p {
+    margin: 0;
     color: var(--text-secondary);
     font-size: 0.9rem;
-    margin: 0;
+    line-height: 1.55;
 }
 
 
@@ -419,10 +451,10 @@ main {
 ======================================== */
 
 footer {
-    min-height: 4.5em;
-    border-top: 1px solid var(--border);
-
+    min-height: 4.5rem;
     padding: 1rem 2rem;
+
+    border-top: 1px solid var(--border);
 
     color: var(--text-muted);
     font-size: 0.85rem;
@@ -440,7 +472,7 @@ footer .link-wrapper {
     color: var(--text-secondary);
     text-decoration: none;
 
-    transition: var(--transition);
+    transition: color var(--transition);
 }
 
 .github-link:hover {
@@ -465,7 +497,7 @@ th {
 }
 
 tr:nth-child(even) {
-    background-color: var(--surface);
+    background: var(--surface);
 }
 
 
@@ -487,11 +519,11 @@ tr:nth-child(even) {
 }
 
 .photo-gallery img {
+    display: block;
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    display: block;
-    content-visibility: auto;
+
     transition: transform 0.25s ease;
 }
 
@@ -506,8 +538,8 @@ tr:nth-child(even) {
 }
 
 .photo-countries a img {
-    max-width: 5em;
     display: block;
+    max-width: 5em;
 }
 
 
@@ -523,13 +555,13 @@ tr:nth-child(even) {
 }
 
 .project-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius);
-    overflow: hidden;
-
-    display: flex;
-    flex-direction: column;
 
     transition: var(--transition);
 }
@@ -540,9 +572,9 @@ tr:nth-child(even) {
 }
 
 .project-card img {
+    display: block;
     width: 100%;
     height: auto;
-    display: block;
 }
 
 .project-info {
@@ -573,7 +605,6 @@ tr:nth-child(even) {
     overflow-y: hidden;
 
     padding-bottom: 1em;
-    box-sizing: border-box;
 }
 
 .project-list {
@@ -591,22 +622,21 @@ tr:nth-child(even) {
 }
 
 .project-list .project {
-    box-sizing: border-box;
-    width: 12em;
-    height: 13em;
-
-    padding: 1em;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.75em;
 
+    width: 12em;
+    height: 13em;
+    padding: 1em;
+
+    overflow: hidden;
+
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius);
 
-    overflow: hidden;
     transition: var(--transition);
 }
 
@@ -616,13 +646,13 @@ tr:nth-child(even) {
 }
 
 .project-list .project a {
-    width: 100%;
-    height: 8em;
-    flex-shrink: 0;
-
     display: flex;
     align-items: center;
     justify-content: center;
+
+    width: 100%;
+    height: 8em;
+    flex-shrink: 0;
 }
 
 .project-list .project img {
@@ -648,13 +678,12 @@ tr:nth-child(even) {
 
 
 /* ========================================
-   Responsive design
+   Responsive: tablets and mobile
 ======================================== */
 
 @media screen and (max-width: 768px) {
-
     main {
-        padding: 2rem 1.2rem 4rem;
+        padding: 2.5rem 1.2rem 4rem;
         gap: 4rem;
     }
 
@@ -682,33 +711,38 @@ tr:nth-child(even) {
         text-align: left;
     }
 
+    /* Convert the alternating timeline into a single-column timeline */
+    .timeline {
+        padding-left: 0;
+    }
+
     .timeline::after {
-        left: 1.5rem;
+        left: 1rem;
+        transform: none;
     }
 
-    .container {
+    .container,
+    .left,
+    .right {
+        left: 0;
         width: 100%;
-        padding-left: 4rem;
-        padding-right: 0.5rem;
+        padding: 0 0 1.5rem 3.2rem;
     }
 
-    .container::before {
-        left: 2.4rem;
+    .container::after,
+    .right::after {
+        left: 0.42rem;
+        right: auto;
+    }
+
+    .left::before,
+    .right::before {
+        left: 1.95rem;
         right: auto;
 
         border: 8px solid transparent;
         border-right-color: var(--surface);
-    }
-
-    .left,
-    .right {
-        left: 0;
-    }
-
-    .left::after,
-    .right::after {
-        left: 0.8rem;
-        right: auto;
+        border-left-color: transparent;
     }
 
     .content {
@@ -721,8 +755,8 @@ tr:nth-child(even) {
     }
 }
 
-@media screen and (max-width: 480px) {
 
+@media screen and (max-width: 480px) {
     header {
         padding: 0 1rem;
     }
@@ -748,7 +782,31 @@ tr:nth-child(even) {
         grid-template-columns: 1fr;
     }
 
+    .project-list {
+        grid-template-columns: repeat(4, 10.5em);
+        grid-auto-columns: 10.5em;
+    }
+
+    .project-list .project {
+        width: 10.5em;
+    }
+
     footer {
         padding: 1rem;
+    }
+}
+
+
+/* ========================================
+   Reduced motion preference
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
     }
 }
